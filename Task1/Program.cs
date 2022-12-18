@@ -1,15 +1,10 @@
-﻿/*8 Задайте двумерный массив размером m×n, 
+﻿/* 8 Задайте двумерный массив размером m×n, 
 заполненный случайными вещественными числами.
-
 m = 3, n = 4.
-
 0,5 7 -2 -0,2
-
 1 -3,3 8 -9,9
-
-8 7,8 -7,1 9
-*/
-//Метод задания  количества строк массива int GetArrayRowsNumber(string message)
+8 7,8 -7,1 9 */
+//Методы задания  количества строк и столбцов массива int GetArrayRowsNumber(string message)
 int GetArrayRowsNumber(string message)
 {
     int rowNum;
@@ -44,7 +39,7 @@ int GetArrayColumnNumber(string message)
     }
     return columNum;
 }
-
+// Метод заполнения массива случайными вещестенными числами
 void FillRealArray(double[,] arr)
 {
     Random rnd = new Random();
@@ -73,31 +68,3 @@ int columnNumbers = GetArrayColumnNumber(($"Введите количество 
 double[,] matrix = new double[rowNumbers, columnNumbers];
 FillRealArray(matrix);
 PrintArray(matrix);
-
-
-
-/*
-void FillArray(int[,] arr
-)
-{
-    Random rnd = new Random();
-    for (int i = 0; i < arr
-    .GetLength(0); i++)
-    {
-        for (int j = 0; j < arr
-        .GetLength(1); j++)
-        {
-            arr
-            [i, j] = rnd.Next(1, 10);
-        }
-    }
-}
-*/
-
-
-//Метод задания количества столбцов массива int GetArrayColumnNumbers(string message)
-//Метод задания массива double[] FillRealMassive (int RowNumbers, int ColumnNumbers)
-//Визуализация  массива заполненного случайными вещественными числами
-
-
-
