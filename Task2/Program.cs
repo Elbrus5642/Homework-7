@@ -58,6 +58,7 @@ int colnum = GetNumber("Введите количество столбцов м�
 int[,] array2D = InitMatrix(rownum, colnum);
 Console.WriteLine($"Получена матрица ({rownum} x {colnum}):");
 PrintArray(array2D);
+Console.WriteLine();
 
 //Вызов  элемента по заданным строке и столбцу
 int askrownum = GetNumber("Введите номер строки элемента массива:");
