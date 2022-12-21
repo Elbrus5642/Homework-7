@@ -22,15 +22,16 @@ int GetNumber(string message)
     }
     return rowNum;
 }
+
 // Метод заполнения массива случайными вещестенными числами
-void FillRealArray(double[,] arr)
+void InitRealArray(double[,] arr)
 {
     Random rnd = new Random();
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            arr[i, j] = Math.Round((rnd.Next(-10, 10) + rnd.NextDouble()),2);
+            arr[i, j] = Math.Round((rnd.Next(-10, 10) + rnd.NextDouble()),1);
         }
     }
 }
@@ -49,5 +50,5 @@ void PrintArray(double[,] arr)
 int rowNum = GetNumber($"Введите количество строк массива");
 int columnNum = GetNumber(($"Введите количество строк массива"));
 double[,] matrix = new double[rowNum, columnNum];
-FillRealArray(matrix);
+InitRealArray(matrix);
 PrintArray(matrix);
